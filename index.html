@@ -1,49 +1,80 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-p {
-  text-align: center;
-  font-size: 60px;
-  margin-top: 0px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" src="style.css">
+    <title>CalmAI</title>
 </head>
-<body>
-
-<p id="demo"></p>
-
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Jul 8, 2020 20:00:00").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
+<body class="fundo">
+    <!-- Barra de navegação - navbar -->
+    <div class="row">
+        <div class="col-12">
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Sobre</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Inscrições</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Blog</a>
+                </li>
+              </ul>
+        </div>
+    </div>
     
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-    
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-  // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-    
-  // If the count down is over, write some text 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
-
+    <!-- Início div Container -->
+    <div class="container">
+        <div class="row">
+            
+            
+            <!-- Início div Cronometro --> 
+            <div class="col-12 d-flex justify-content-center">
+                <div class="cronometro">
+                    <h5>CONTAGEM REGRESSIVA</h5>
+                    <p id="demo"></p>
+                </div>                
+            </div>   
+            <!-- Fim div Cronômetro -->
+            
+            <div class="col-6">
+                
+                <div class="contagem"></div>
+                <div class="texto">WEBINAR | Gerenciamento de Pessoas:</div>
+                <div class="texto2"></div>
+                <div class="texto3">O gerenciamento de pessoas passa por mudanças regulares e é uma prática que precisa de desenvolvimento contínuo. Com o surgimento da pandemia, fomos inseridos em um novo cenário extremamente desafiador para o mercado como um todo. Novas práticas e metodologias inovadoras precisam ser aplicadas para que empresas consigam manter seus colaboradores saudáveis e engajados. A saúde e bem-estar são fatores essenciais para o desenvolvimento de profissionais. Sobre o que iremos falar: - Novas práticas para saúde do colaborador; - Tecnologias para gerenciamento de benefícios de saúde; - Porque precisamos falar de saúde mental com colaboradores; - Exercícios para fazer em casa (Yoga, Meditação, Alongamentos);</div>
+            </div>
+            
+            <div class="col-6">
+                <div class="verde"><div class="texto4">Ao vivo, online e gratuito!</div>
+                <form>
+                    <div class="form-group">
+                      
+                      <input type="text" class="form-control" id="nome"  placeholder="Nome" required>
+                     
+                    </div>
+                    <div class="form-group">
+                      
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Digite seu email" required>
+                        
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="empresa"  placeholder="Empresa" required>
+                      </div>
+                    <button type="submit" class="btn btn-primary">PARTICIPE</button>
+                  </form>
+            
+            </div>
+                
+        </div>
+        
+    <!-- Fim da div Container -->
+    </div>
+<script src="script.js"></script>
 </body>
 </html>
